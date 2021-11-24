@@ -1,4 +1,12 @@
-# 2. Progression (coding task)
+# Mid-term test 1 (variant 1)
+
+Fork the repository, add/edit files in the directories in order to complete the
+test. The completed test must be submitted as a GitHub pull request to
+[prog-1/test-2-1](github.com/prog-1/test-2-1) repository.
+
+The test consists of four tasks (see below).
+
+## 2. Progression (coding task)
 
 Write a program that finds the `n`th term (`n` is a non-negative integer) of
 the progression
@@ -14,7 +22,7 @@ the progression
 1. Create a file with tests for the program. The tests must cover all
    representative inputs.
    
-## Example 1
+### Example 1
    
 ```
 Enter n: 1
@@ -25,7 +33,7 @@ The nth term is 1.
 
 `nthTerm(1)` must return `1`, because <img src="https://render.githubusercontent.com/render/math?math=a_1 = 1">.
  
-## Example 2
+### Example 2
  
 ```
 Enter n: 4
@@ -36,7 +44,7 @@ The nth term is 20.
     
 <img src="https://render.githubusercontent.com/render/math?math=\begin{align*}a_0 %26= 0\\a_1 %26= 1\\ a_2 %26 = 3a_0 %2b 2a_1 = 3 \cdot 0 %2b 2 \cdot 1 = 2\\a_3 %26 = 3a_1 %2b 2a_2 = 3 \cdot 1 %2b 2 \cdot 2 = 7\\a_4 %26 = 3a_2 %2b 2a_3 = 3 \cdot 2 %2b 2 \cdot 7 = 20\end{align*}">
 
-# 3. Filter (coding task)
+## 3. Filter (coding task)
 
 Write a program that removes all integers divisible by `3` from a slice of
 integers.
@@ -51,7 +59,7 @@ integers.
 1. Create a file with tests for the program. The tests must cover all
    representative inputs.
 
-## Example 1
+### Example 1
 
 ```
 Enter the number of elements in a slice: 2
@@ -62,7 +70,7 @@ The filtered slice: []
 `filter([]int{-21, 18})` returns `[]int{}`, because all integer in the slice
 are divisible by `3`, and are removed from the slice.
 
-## Example 2
+### Example 2
 
 ```
 Enter the number of elements in a slice: 5

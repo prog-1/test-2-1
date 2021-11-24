@@ -40,11 +40,11 @@ func f2(a, b []int) []int {
 		}
 	}
 	// QUESTION 4: Is it possible that the conditions of the following two if
-	//             statements are true?
+	//             statements are *both* true?
 	// ANSWER 4:
 	//
 	// QUESTION 5: Is it possible that the conditions of the following two if
-	//             statements are false?
+	//             statements are *both* false?
 	// ANSWER 5:
 	if ia < len(a) {
 		copy(c[ic:], a[ia:])

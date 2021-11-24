@@ -1,4 +1,4 @@
-# Mid-term test 1 (variant 1)
+# Mid-term test 2 (variant 1)
 
 Fork the repository, add/edit files in the directories in order to complete the
 test. The completed test must be submitted as a GitHub pull request to

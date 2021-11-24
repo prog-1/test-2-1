@@ -6,6 +6,37 @@ test. The completed test must be submitted as a GitHub pull request to
 
 The test consists of four tasks (see below).
 
+## 1. Code comprehension
+
+Explain `erlaeuterung` program and complete the tasks.
+
+The program contains special comments:
+
+- `QUESTION N:` requires an answer provided in the following line prefixed with
+  `ANSWER N:`. E.g.
+
+   ```go
+   // QUESTION 1: What is []int?
+   // ANSWER 1: Creates a variable named `x` of type slice of ints.
+   var x []int
+   ```
+
+- `TASK N:` requires an action described. In the following example we expect you
+   to rename `f1` into something like `printSlice` - a function which has a
+   better name:
+
+   ```go
+   // TASK 1: Provide a better name for the function.
+   func f1(s [][]int) {
+      for _, row := range s {
+         for _, v := range row {
+            fmt.Printf("%3d", v)
+         }
+         fmt.Println()
+      }
+   }
+   ```
+
 ## 2. Progression (coding task)
 
 Write a program that finds the `n`th term (`n` is a non-negative integer) of

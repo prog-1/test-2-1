@@ -2,7 +2,7 @@
 
 Fork the repository, add/edit files in the directories in order to complete the
 test. The completed test must be submitted as a GitHub pull request to
-[prog-1/test-2-1](github.com/prog-1/test-2-1) repository.
+[prog-1/test-2-1](https://github.com/prog-1/test-2-1) repository.
 
 The test consists of four tasks (see below).
 

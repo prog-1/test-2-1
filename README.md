@@ -120,7 +120,7 @@ Write a program that generates a matrix of values such as:
 - any other element of the table is the sum of all elements above it (in the
   same column) and to the right (in the same row).
 
-Example:
+### Example
 
 ```
 0   0   0   0   1

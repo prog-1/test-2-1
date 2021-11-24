@@ -71,7 +71,7 @@ Enter n: 4
 The nth term is 20.
 ```
     
-`nthTerm(4) must return `20`, because
+`nthTerm(4)` must return `20`, because
     
 <img src="https://render.githubusercontent.com/render/math?math=\begin{align*}a_0 %26= 0\\a_1 %26= 1\\ a_2 %26 = 3a_0 %2b 2a_1 = 3 \cdot 0 %2b 2 \cdot 1 = 2\\a_3 %26 = 3a_1 %2b 2a_2 = 3 \cdot 1 %2b 2 \cdot 2 = 7\\a_4 %26 = 3a_2 %2b 2a_3 = 3 \cdot 2 %2b 2 \cdot 7 = 20\end{align*}">
 

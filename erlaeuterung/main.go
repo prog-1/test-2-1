@@ -7,13 +7,13 @@ import (
 )
 
 // QUESTION 1: What does this function do?
-// ANSWER 1:
+// This function sorts the slice inplace
 //
 // QUESTION 2: Which algorithm does this function implement?
-// ANSWER 2:
+// Bubble-sort algorithm
 //
 // TASK 1: Provide a better name.
-func f1(s []int) {
+func Sort(s []int) {
 	for i := len(s) - 1; i > 0; i-- {
 		for j := 0; j < i; j++ {
 			if s[j] > s[j+1] {
@@ -24,10 +24,10 @@ func f1(s []int) {
 }
 
 // QUESTION 3: What does this function do?
-// ANSWER 3:
+//
 //
 // TASK 2: Provide a better name.
-func f2(a, b []int) []int {
+func Odd(a, b []int) []int {
 	c := make([]int, len(a)+len(b))
 	ic, ia, ib := 0, 0, 0
 	for ; ia < len(a) && ib < len(b); ic++ {
@@ -41,11 +41,11 @@ func f2(a, b []int) []int {
 	}
 	// QUESTION 4: Is it possible that the conditions of the following two if
 	//             statements are *both* true?
-	// ANSWER 4:
+	// Yes
 	//
 	// QUESTION 5: Is it possible that the conditions of the following two if
 	//             statements are *both* false?
-	// ANSWER 5:
+	// No
 	if ia < len(a) {
 		copy(c[ic:], a[ia:])
 	}
@@ -65,7 +65,7 @@ func main() {
 	f1(b)
 
 	// QUESTION 6: Does the following call modify `a` and/or `b`?
-	// ANSWER 6:
+	// Both, a and b
 	c := f2(a, b)
 
 	fmt.Println(c)

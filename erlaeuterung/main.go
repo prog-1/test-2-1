@@ -7,13 +7,13 @@ import (
 )
 
 // QUESTION 1: What does this function do?
-// ANSWER 1:
+// ANSWER 1: Sorts value in the slice from smaller to bigger
 //
 // QUESTION 2: Which algorithm does this function implement?
-// ANSWER 2:
+// ANSWER 2: Buble-sorting algoritm
 //
 // TASK 1: Provide a better name.
-func f1(s []int) {
+func Sort(s []int) {
 	for i := len(s) - 1; i > 0; i-- {
 		for j := 0; j < i; j++ {
 			if s[j] > s[j+1] {
@@ -21,6 +21,7 @@ func f1(s []int) {
 			}
 		}
 	}
+
 }
 
 // QUESTION 3: What does this function do?
@@ -41,11 +42,11 @@ func f2(a, b []int) []int {
 	}
 	// QUESTION 4: Is it possible that the conditions of the following two if
 	//             statements are *both* true?
-	// ANSWER 4:
+	// ANSWER 4:No
 	//
 	// QUESTION 5: Is it possible that the conditions of the following two if
 	//             statements are *both* false?
-	// ANSWER 5:
+	// ANSWER 5: Yes
 	if ia < len(a) {
 		copy(c[ic:], a[ia:])
 	}
@@ -61,8 +62,8 @@ func main() {
 	a := randInts(rand.Intn(maxLen), maxVal) // And create two vectors of random
 	b := randInts(rand.Intn(maxLen), maxVal) // lengths and values.
 
-	f1(a)
-	f1(b)
+	Sort(a)
+	Sort(b)
 
 	// QUESTION 6: Does the following call modify `a` and/or `b`?
 	// ANSWER 6:

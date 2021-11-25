@@ -3,17 +3,16 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"time"
 )
 
 // QUESTION 1: What does this function do?
-// ANSWER 1:
+// ANSWER 1: Sorting
 //
 // QUESTION 2: Which algorithm does this function implement?
-// ANSWER 2:
+// ANSWER 2:bubble sort
 //
 // TASK 1: Provide a better name.
-func f1(s []int) {
+func bubbleSort(s []int) {
 	for i := len(s) - 1; i > 0; i-- {
 		for j := 0; j < i; j++ {
 			if s[j] > s[j+1] {
@@ -55,21 +54,21 @@ func f2(a, b []int) []int {
 	return c
 }
 
-func main() {
-	const maxLen, maxVal = 7, 10
-	rand.Seed(time.Now().UnixNano())         // Init pseudo RNG.
-	a := randInts(rand.Intn(maxLen), maxVal) // And create two vectors of random
-	b := randInts(rand.Intn(maxLen), maxVal) // lengths and values.
+// func main() {
+// 	const maxLen, maxVal = 7, 10
+// 	rand.Seed(time.Now().UnixNano())         // Init pseudo RNG.
+// 	a := randInts(rand.Intn(maxLen), maxVal) // And create two vectors of random
+// 	b := randInts(rand.Intn(maxLen), maxVal) // lengths and values.
 
-	f1(a)
-	f1(b)
+// 	f1(a)
+// 	f1(b)
 
-	// QUESTION 6: Does the following call modify `a` and/or `b`?
-	// ANSWER 6:
-	c := f2(a, b)
+// 	// QUESTION 6: Does the following call modify `a` and/or `b`?
+// 	// ANSWER 6:
+// 	c := f2(a, b)
 
-	fmt.Println(c)
-}
+// 	fmt.Println(c)
+// }
 
 // randInts return a slice of the given length filled with random numbers in the
 // range [0, max).
@@ -81,4 +80,7 @@ func randInts(l, max int) []int {
 		s[i] = rand.Intn(max)
 	}
 	return s
+}
+func main() {
+	fmt.Println(f2([]int{1, 3, 2}, []int{6, 8}))
 }

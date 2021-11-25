@@ -7,13 +7,13 @@ import (
 )
 
 // QUESTION 1: What does this function do?
-// ANSWER 1:
+// ANSWER 1:It sorts numbers in slice in order from smallest to biggest
 //
 // QUESTION 2: Which algorithm does this function implement?
-// ANSWER 2:
+// ANSWER 2: comparison of two adjacent numbers
 //
 // TASK 1: Provide a better name.
-func f1(s []int) {
+func Sorting(s []int) {
 	for i := len(s) - 1; i > 0; i-- {
 		for j := 0; j < i; j++ {
 			if s[j] > s[j+1] {
@@ -27,7 +27,7 @@ func f1(s []int) {
 // ANSWER 3:
 //
 // TASK 2: Provide a better name.
-func f2(a, b []int) []int {
+func Comparison(a, b []int) []int {
 	c := make([]int, len(a)+len(b))
 	ic, ia, ib := 0, 0, 0
 	for ; ia < len(a) && ib < len(b); ic++ {
@@ -41,11 +41,11 @@ func f2(a, b []int) []int {
 	}
 	// QUESTION 4: Is it possible that the conditions of the following two if
 	//             statements are *both* true?
-	// ANSWER 4:
+	// ANSWER 4: no
 	//
 	// QUESTION 5: Is it possible that the conditions of the following two if
 	//             statements are *both* false?
-	// ANSWER 5:
+	// ANSWER 5: yes
 	if ia < len(a) {
 		copy(c[ic:], a[ia:])
 	}
@@ -61,12 +61,12 @@ func main() {
 	a := randInts(rand.Intn(maxLen), maxVal) // And create two vectors of random
 	b := randInts(rand.Intn(maxLen), maxVal) // lengths and values.
 
-	f1(a)
-	f1(b)
+	Sorting(a)
+	Sorting(b)
 
 	// QUESTION 6: Does the following call modify `a` and/or `b`?
-	// ANSWER 6:
-	c := f2(a, b)
+	// ANSWER 6: it calls both and a and b
+	c := Comparison(a, b)
 
 	fmt.Println(c)
 }

@@ -40,11 +40,11 @@ func f2(a, b []int) []int {
 	}
 	// QUESTION 4: Is it possible that the conditions of the following two if
 	//             statements are *both* true?
-	// ANSWER 4:
+	// ANSWER 4:No
 	//
 	// QUESTION 5: Is it possible that the conditions of the following two if
 	//             statements are *both* false?
-	// ANSWER 5:
+	// ANSWER 5:No
 	if ia < len(a) {
 		copy(c[ic:], a[ia:])
 	}
@@ -54,26 +54,26 @@ func f2(a, b []int) []int {
 	return c
 }
 
-// func main() {
-// 	const maxLen, maxVal = 7, 10
-// 	rand.Seed(time.Now().UnixNano())         // Init pseudo RNG.
-// 	a := randInts(rand.Intn(maxLen), maxVal) // And create two vectors of random
-// 	b := randInts(rand.Intn(maxLen), maxVal) // lengths and values.
+func main() {
+	const maxLen, maxVal = 7, 10
+	rand.Seed(time.Now().UnixNano())         // Init pseudo RNG.
+	a := randInts(rand.Intn(maxLen), maxVal) // And create two vectors of random
+	b := randInts(rand.Intn(maxLen), maxVal) // lengths and values.
 
-// 	f1(a)
-// 	f1(b)
+	f1(a)
+	f1(b)
 
-// 	// QUESTION 6: Does the following call modify `a` and/or `b`?
-// 	// ANSWER 6:
-// 	c := f2(a, b)
+	// QUESTION 6: Does the following call modify `a` and/or `b`?
+	// ANSWER 6:No
+	c := f2(a, b)
 
-// 	fmt.Println(c)
-// }
+	fmt.Println(c)
+}
 
-// randInts return a slice of the given length filled with random numbers in the
-// range [0, max).
-//
-// Note: this function does not need any explanation.
+randInts return a slice of the given length filled with random numbers in the
+range [0, max).
+
+Note: this function does not need any explanation.
 func randInts(l, max int) []int {
 	s := make([]int, l)
 	for i := range s {
@@ -81,6 +81,6 @@ func randInts(l, max int) []int {
 	}
 	return s
 }
-func main() {
-	fmt.Println(f2([]int{1, 3, 2}, []int{6, 8}))
-}
+// func main() {
+// 	fmt.Println(f2([]int{1, 3, 2}, []int{6, 8}))
+// }

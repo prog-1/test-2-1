@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func filter(s []int) []int{
-	s := make 
+	s := make([]int)
 }
 
 func main(){

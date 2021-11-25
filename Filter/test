@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func TestProgression(t *testing.T) {
+	for _, tc := range []struct {
+		want []uint
+	}{
+		{[]int{5},}
+		{[]int{-8}}
+		{[]int{2}}
+		{[]int{9}}
+		{[]int{-5}}
+	}

@@ -7,15 +7,15 @@ import (
 )
 
 // QUESTION 1: What does this function do?
-// ANSWER 1:
+// ANSWER 1:  программа сортирует индесы,что бы в получить переменные в массиве по уменьшению значения(убывание)
 //
 // QUESTION 2: Which algorithm does this function implement?
-// ANSWER 2:
+// ANSWER 2: сортировка
 //
 // TASK 1: Provide a better name.
-func f1(s []int) {
-	for i := len(s) - 1; i > 0; i-- {
-		for j := 0; j < i; j++ {
+func sortMaxMin(s []int) {
+	for i := len(s) - 1; i > 0; i-- {  //поиск 0 индекса
+		for j := 0; j < i; j++ {   //сравнивает переменные в 0 и i индексе
 			if s[j] > s[j+1] {
 				s[j], s[j+1] = s[j+1], s[j]
 			}
@@ -24,14 +24,14 @@ func f1(s []int) {
 }
 
 // QUESTION 3: What does this function do?
-// ANSWER 3:
+// ANSWER 3:функция сортирует переменные в массиве в порядок возростания
 //
 // TASK 2: Provide a better name.
-func f2(a, b []int) []int {
-	c := make([]int, len(a)+len(b))
-	ic, ia, ib := 0, 0, 0
-	for ; ia < len(a) && ib < len(b); ic++ {
-		if a[ia] < b[ib] {
+func sortMinMax(a, b []int) []int {
+	c := make([]int, len(a)+len(b)) 
+	ic, ia, ib := 0, 0, 0   //переменным присваивается значение 0
+	for ; ia < len(a) && ib < len(b); ic++ {    //0 < len(a) ,0 < len(b)
+		if a[ia] < b[ib] {  
 			c[ic] = a[ia]
 			ia++
 		} else {
@@ -41,11 +41,11 @@ func f2(a, b []int) []int {
 	}
 	// QUESTION 4: Is it possible that the conditions of the following two if
 	//             statements are *both* true?
-	// ANSWER 4:
+	// ANSWER 4: да
 	//
 	// QUESTION 5: Is it possible that the conditions of the following two if
 	//             statements are *both* false?
-	// ANSWER 5:
+	// ANSWER 5: да
 	if ia < len(a) {
 		copy(c[ic:], a[ia:])
 	}
@@ -65,7 +65,7 @@ func main() {
 	f1(b)
 
 	// QUESTION 6: Does the following call modify `a` and/or `b`?
-	// ANSWER 6:
+	// ANSWER 6: b
 	c := f2(a, b)
 
 	fmt.Println(c)

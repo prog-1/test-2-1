@@ -3,17 +3,16 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"time"
 )
 
 // QUESTION 1: What does this function do?
-// ANSWER 1:
+// ANSWER 1: Sorting
 //
 // QUESTION 2: Which algorithm does this function implement?
-// ANSWER 2:
+// ANSWER 2:bubble sort
 //
 // TASK 1: Provide a better name.
-func f1(s []int) {
+func bubbleSort(s []int) {
 	for i := len(s) - 1; i > 0; i-- {
 		for j := 0; j < i; j++ {
 			if s[j] > s[j+1] {
@@ -41,11 +40,11 @@ func f2(a, b []int) []int {
 	}
 	// QUESTION 4: Is it possible that the conditions of the following two if
 	//             statements are *both* true?
-	// ANSWER 4:
+	// ANSWER 4:No
 	//
 	// QUESTION 5: Is it possible that the conditions of the following two if
 	//             statements are *both* false?
-	// ANSWER 5:
+	// ANSWER 5:No
 	if ia < len(a) {
 		copy(c[ic:], a[ia:])
 	}
@@ -65,16 +64,16 @@ func main() {
 	f1(b)
 
 	// QUESTION 6: Does the following call modify `a` and/or `b`?
-	// ANSWER 6:
+	// ANSWER 6:No
 	c := f2(a, b)
 
 	fmt.Println(c)
 }
 
-// randInts return a slice of the given length filled with random numbers in the
-// range [0, max).
-//
-// Note: this function does not need any explanation.
+randInts return a slice of the given length filled with random numbers in the
+range [0, max).
+
+Note: this function does not need any explanation.
 func randInts(l, max int) []int {
 	s := make([]int, l)
 	for i := range s {
@@ -82,3 +81,6 @@ func randInts(l, max int) []int {
 	}
 	return s
 }
+// func main() {
+// 	fmt.Println(f2([]int{1, 3, 2}, []int{6, 8}))
+// }
